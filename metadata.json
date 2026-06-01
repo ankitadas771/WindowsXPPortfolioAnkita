@@ -1,0 +1,6 @@
+{
+  "name": "Windows XP Portfolio",
+  "description": "Windows XP 2010 style desktop portfolio for Ankita Das, Front-end Developer and UI/UX Designer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

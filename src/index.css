@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-xp-blue: #0054e3;
+  --color-xp-blue-light: #245edb;
+  --color-xp-blue-dark: #1a4bb3;
+  --color-xp-orange: #e31212;
+  --color-xp-orange-dark: #b50e0e;
+  --color-xp-green: #388e3c;
+  --color-xp-green-dark: #1b5e20;
+  --color-xp-taskbar: #245edb;
+  --color-xp-bg: #ece9d8;
+  --color-xp-silver: #ece9d8;
+  
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom classic 3D borders for XP/98 UI feel */
+.xp-border-inset {
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+.xp-border-outset {
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+.xp-window-shadow {
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+/* Scrollbars for classic Windows experience */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ebd9;
+  border: 1px solid #dfd7c0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0d9c1;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #c6bfa7;
+}
+
+::-webkit-scrollbar-button {
+  background: #e0d9c1;
+  display: block;
+  height: 12px;
+  width: 12px;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+/* CRT scanlines for loader screen */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 20;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Selection aesthetics */
+::selection {
+  background-color: #0a53de;
+  color: white;
+}
